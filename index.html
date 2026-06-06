@@ -1,8 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futur Dev Academy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenue à Futur Dev Academy</h1>
-    <script src="main.Js" ></script>
+    <!-- Header principal de la page -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#accueil" class="brand">Futur Dev Academy</a>
+            <nav class="main-nav" aria-label="Menu principal">
+                <a href="#accueil">Accueil</a>
+                <a href="#modules">Modules</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#presentation">À propos</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#cta" class="btn btn-primary header-btn">Commencer</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section héros avec message principal et boutons d'action -->
+        <section class="hero" id="accueil">
+            <div class="container hero-content">
+                <p class="eyebrow">Plateforme de révision web</p>
+                <h1>Révisez le Développement Web Efficacement</h1>
+                <p class="hero-text">Apprenez, révisez et testez vos connaissances grâce à des fiches de cours et des quiz interactifs.</p>
+                <div class="hero-actions">
+                    <a href="#cta" class="btn btn-primary">Commencer maintenant</a>
+                    <a href="#modules" class="btn btn-secondary">Découvrir les modules</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section de présentation de la plateforme -->
+        <section class="presentation" id="presentation">
+            <div class="container section-block">
+                <div class="section-header">
+                    <span class="section-label">Pourquoi Futur Dev Academy ?</span>
+                    <h2>Une plateforme conçue pour consolider vos acquis rapidement.</h2>
+                </div>
+                <p class="section-description">Futur Dev Academy aide les étudiants intermédiaires à réviser rapidement, mémoriser les notions importantes, tester leurs connaissances et suivre leur progression au fil des modules.</p>
+                <div class="feature-list">
+                    <div class="feature-item">Réviser rapidement</div>
+                    <div class="feature-item">Mémoriser les notions importantes</div>
+                    <div class="feature-item">Tester leurs connaissances</div>
+                    <div class="feature-item">Suivre leur progression</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section des modules proposés -->
+        <section class="modules" id="modules">
+            <div class="container section-block">
+                <div class="section-header">
+                    <span class="section-label">Modules essentiels</span>
+                    <h2>Apprenez par thème avec des contenus structurés.</h2>
+                </div>
+                <div class="module-grid">
+                    <article class="module-card">
+                        <h3>HTML</h3>
+                        <ul>
+                            <li>Structure des pages web</li>
+                            <li>Balises essentielles</li>
+                            <li>Formulaires</li>
+                        </ul>
+                    </article>
+                    <article class="module-card">
+                        <h3>CSS</h3>
+                        <ul>
+                            <li>Mise en forme</li>
+                            <li>Flexbox</li>
+                            <li>Grid Layout</li>
+                        </ul>
+                    </article>
+                    <article class="module-card">
+                        <h3>JavaScript</h3>
+                        <ul>
+                            <li>Variables</li>
+                            <li>Fonctions</li>
+                            <li>DOM</li>
+                            <li>Événements</li>
+                        </ul>
+                    </article>
+                    <article class="module-card">
+                        <h3>React</h3>
+                        <ul>
+                            <li>Composants</li>
+                            <li>Props</li>
+                            <li>Hooks</li>
+                            <li>State</li>
+                        </ul>
+                    </article>
+                    <article class="module-card">
+                        <h3>Angular</h3>
+                        <ul>
+                            <li>Components</li>
+                            <li>Services</li>
+                            <li>Routing</li>
+                        </ul>
+                    </article>
+                    <article class="module-card">
+                        <h3>Git &amp; GitHub</h3>
+                        <ul>
+                            <li>Git init</li>
+                            <li>Commit</li>
+                            <li>Push</li>
+                            <li>Pull</li>
+                            <li>Collaboration</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="fonctionnalites">
+            <div class="container section-block">
+                <div class="section-header">
+                    <span class="section-label">Fonctionnalités</span>
+                    <h2>Tout ce dont vous avez besoin pour progresser.</h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card">Fiches de révision</article>
+                    <article class="feature-card">Exercices pratiques</article>
+                    <article class="feature-card">Quiz interactifs</article>
+                    <article class="feature-card">Suivi de progression</article>
+                    <article class="feature-card">Résumés de cours</article>
+                    <article class="feature-card">Préparation aux examens</article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section d'aperçu des quiz disponibles -->
+        <section class="quiz" id="quiz">
+            <div class="container section-block">
+                <div class="section-header">
+                    <span class="section-label">Aperçu des quiz</span>
+                    <h2>Testez vos connaissances avec des quiz ciblés.</h2>
+                </div>
+                <div class="quiz-grid">
+                    <article class="quiz-card">HTML Quiz</article>
+                    <article class="quiz-card">CSS Quiz</article>
+                    <article class="quiz-card">JavaScript Quiz</article>
+                    <article class="quiz-card">React Quiz</article>
+                    <article class="quiz-card">Angular Quiz</article>
+                    <article class="quiz-card">Git/GitHub Quiz</article>
+                </div>
+                <div class="quiz-score">Score moyen : 85%</div>
+            </div>
+        </section>
+
+        <section class="stats" id="statistiques">
+            <div class="container section-block">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <strong>6</strong>
+                        <span>Modules</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>100+</strong>
+                        <span>Exercices</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>500+</strong>
+                        <span>Questions Quiz</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>1000+</strong>
+                        <span>Étudiants</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section d'appel à l'action finale -->
+        <section class="cta" id="cta">
+            <div class="container cta-block">
+                <h2>Prêt à renforcer vos compétences ?</h2>
+                <p>Commencez dès aujourd'hui et progressez dans le développement web.</p>
+                <a href="#modules" class="btn btn-primary">Rejoindre l'académie</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="container footer-inner">
+            <div class="footer-brand">Futur Dev Academy</div>
+            <div class="footer-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#modules">Modules</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#presentation">À propos</a>
+            </div>
+            <div class="footer-social">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+        <p class="footer-copy">© 2026 Futur Dev Academy. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

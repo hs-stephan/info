@@ -1,0 +1,400 @@
+/* Futur Dev Academy - Styles globaux */
+:root {
+    color-scheme: dark;
+    --bg: #111;
+    --surface: #181a1f;
+    --surface-alt: #14161a;
+    --text: #ffffff;
+    --muted: #c4cdd9;
+    --primary: #007bff;
+    --border: rgba(255, 255, 255, 0.08);
+    --radius: 22px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    background: radial-gradient(circle at top, rgba(0, 123, 255, 0.08), transparent 32%), var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+button,
+a {
+    text-decoration: none;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(17, 17, 17, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 20px 0;
+}
+
+.brand,
+.footer-brand {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: var(--text);
+}
+
+.header-btn,
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 999px;
+    padding: 0.95rem 1.6rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+}
+
+.hero {
+    padding: 96px 0 64px;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    margin-bottom: 18px;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+}
+
+.hero h1 {
+    margin: 0 0 24px;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+}
+
+.hero-text {
+    max-width: 700px;
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.section-block {
+    padding: 72px 0;
+}
+
+.section-header {
+    max-width: 760px;
+    margin-bottom: 28px;
+}
+
+.section-label {
+    display: inline-flex;
+    margin-bottom: 16px;
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.section-header h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+}
+
+.section-description {
+    max-width: 720px;
+    color: var(--muted);
+    font-size: 1rem;
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.feature-item {
+    background: var(--surface);
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.module-grid,
+.feature-grid,
+.quiz-grid,
+.stats-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.module-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.module-card,
+.feature-card,
+.quiz-card,
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+}
+
+.module-card h3,
+.feature-card,
+.quiz-card h3,
+.stat-card strong {
+    margin: 0 0 14px;
+}
+
+.module-card h3 {
+    font-size: 1.15rem;
+}
+
+.module-card ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+}
+
+.module-card li {
+    margin-bottom: 10px;
+}
+
+.feature-card,
+.quiz-card {
+    font-weight: 600;
+    color: var(--text);
+}
+
+.feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quiz {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.quiz-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.quiz-card {
+    min-height: 120px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-radius: 24px;
+}
+
+.quiz-score {
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.stats {
+    padding-top: 0;
+}
+
+.stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.stat-card {
+    padding: 32px;
+    text-align: center;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--text);
+}
+
+.stat-card span {
+    color: var(--muted);
+    margin-top: 10px;
+    display: block;
+}
+
+.cta {
+    padding: 80px 0 90px;
+    background: var(--surface-alt);
+    border-top: 1px solid var(--border);
+}
+
+.cta-block {
+    display: grid;
+    gap: 24px;
+    justify-items: start;
+    align-items: center;
+}
+
+.cta-block h2 {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 2.6rem);
+}
+
+.cta-block p {
+    max-width: 620px;
+    color: var(--muted);
+}
+
+.site-footer {
+    background: #0d0e11;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 32px 0 24px;
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer-links a,
+.footer-social a {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--text);
+}
+
+.footer-copy {
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 0.92rem;
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    .module-grid,
+    .feature-grid,
+    .quiz-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .main-nav {
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 72px;
+    }
+
+    .feature-list,
+    .module-grid,
+    .feature-grid,
+    .quiz-grid,
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .cta-block {
+        text-align: center;
+        justify-items: center;
+    }
+}
