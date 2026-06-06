@@ -350,6 +350,123 @@ a {
     text-align: center;
 }
 
+/* Styles pour la page de choix (choix.html) */
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.choice-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.choice-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 123, 255, 0.12);
+}
+
+.choice-icon {
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+.choice-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text);
+}
+
+.choice-description {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.choice-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.choice-details span {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.module-selection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.module-selection-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+    color: var(--text);
+}
+
+.module-selection-card:hover {
+    background: rgba(0, 123, 255, 0.08);
+    border-color: var(--primary);
+    transform: translateX(4px);
+}
+
+.module-name {
+    font-weight: 600;
+}
+
+.module-arrow {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.tip-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+
+.tip-card h4 {
+    margin: 0 0 12px;
+    font-size: 1.1rem;
+    color: var(--text);
+}
+
+.tip-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 @media (max-width: 960px) {
     .module-grid,
     .feature-grid,
@@ -358,6 +475,12 @@ a {
     }
 
     .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .choice-grid,
+    .module-selection-grid,
+    .tips-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -381,6 +504,12 @@ a {
     .feature-grid,
     .quiz-grid,
     .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .choice-grid,
+    .module-selection-grid,
+    .tips-grid {
         grid-template-columns: 1fr;
     }
 
